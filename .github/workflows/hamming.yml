@@ -8,8 +8,8 @@ jobs:
   run-hamming-workflow:
     uses: HammingHQ/hamming-ci-workflow/.github/workflows/hamming_run_agent.yml@main
     with:
-      agent_id: ${{ secrets.AGENT_ID }}
-      dataset_id: ${{ secrets.DATASET_ID }}
-      to_number: ${{ secrets.TO_NUMBER }}
+      agent_id: ${{ vars.AGENT_ID }}
+      dataset_id: ${{ vars.DATASET_ID }}
+      to_number: ${{ vars.TO_NUMBER }}
     secrets:
       HAMMING_API_KEY: ${{ secrets.HAMMING_API_KEY }}
